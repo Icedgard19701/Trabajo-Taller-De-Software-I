@@ -5,6 +5,7 @@ import os
 
 #Definiendo la cantidad de jugadores y cuantas cartillas han comprado
 a = int(input("Cantidad de jugadores: "))
+print()
 c = []
 e = []
 pozo = 0
@@ -34,8 +35,9 @@ bolillas_jugadas = []
 for i in range(1,81):
     bolillas_sin_jugar.append(i)
 
-
+x = 1
 while z == 1:
+    x = x + 1
     juego = random.choice(bolillas_sin_jugar)
     bolillas_sin_jugar.remove(juego)
     bolillas_jugadas.append(juego)
@@ -44,14 +46,11 @@ while z == 1:
     print()
     z = int(input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): "))
 
+#Definiendo la finalizacion del juego
 if z == 3:
-    print()
+    if x < 15:
+        print("Necesita sacar al menos 15 bolillas para terminar el juego")
+    if x > 15:
+        print("Pozo ganado:",pozo)
+        print("Juego Finalizado")
 
-print(pozo)
-
-
-#Bolillas a jugar
-#for i in range(0,80):
-
-print(c)
-print(e)
