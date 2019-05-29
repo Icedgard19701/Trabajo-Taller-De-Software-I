@@ -21,3 +21,26 @@ for i in mensaje:
         print ("Puede seguir")
         break
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ for i in mensaje:
+         letra = i.lower()
+         if letra == "Si":
+             m.append(n[j])
+             print (m)
+             n.remove(j)
+         else:
+             print (n)
