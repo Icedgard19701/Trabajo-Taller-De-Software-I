@@ -18,6 +18,10 @@ print("Jugadores:",c)
 print("N° cartillas:",e)
 
 import random
+import sys
+import os
+
+
 n = []
 for i in range(1, 81):
     n.append(i)
@@ -33,80 +37,30 @@ codigo = int (input("Ingrese codigo:"))
 
 
 m=[]
-i = 1
+
 while codigo == 1:
-    print ("Bolilla", n[i])
-    m.append (n[i])
-    
-    i = i+1
+    bol = random.choice(n)
+    n.remove(bol)
+    m.append(bol)
+    print ("Bolilla", bol)
+    print ("Bolillas que ya salieron:", m)
+  
     codigo = int (input("Ingrese codigo:"))
 
 
+while codigo == 2: 
+     print ("Has seleccionado salir")
+     break
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-m = []
-estado = False
-i=1
-while estado == False and i < 80:
-    codigo = int (input ("Ingrese 1 para nuevo #:"))
-    while codigo ==1:
-        x = n[i]
-        m.append(x)
-        i = i +1
-        print (m)
-
-    
-
-
-    m.append
-
-
-
-
-m = []
-for i in n:
-    m.append(i)
-    
-print (m)
-
-
-
-
-m = []
-mensaje = input ("Mostrar número:")
-mensaje = mensaje.lower()
-estado = False 
-
-for j in range(len(n)):
-    
-     if mensaje == "Si":
-         estado = True
-     if estado == True:
-             m.append(n[j])
-             print (m)
-             n.remove(j)
-             print (n)
-             
-
-
-
-
-
-
-    
- 
-
-
+while codigo == 3:
+    restart = input("\nDo you want to restart the program? [y/n] > ")
+if restart == "y":
+    os.execl(sys.executable, os.path.abspath(__file__), *sys.argv) 
+else:
+    print("\nThe programm will me closed...")
+    sys.exit(0)

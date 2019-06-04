@@ -36,6 +36,92 @@ for i in mensaje:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+m = []
+estado = False
+i=1
+while estado == False and i < 80:
+    codigo = int (input ("Ingrese 1 para nuevo #:"))
+    while codigo ==1:
+        x = n[i]
+        m.append(x)
+        i = i +1
+        print (m)
+
+    
+
+
+    m.append
+
+
+
+
+m = []
+for i in n:
+    m.append(i)
+    
+print (m)
+
+
+
+
+m = []
+mensaje = input ("Mostrar número:")
+mensaje = mensaje.lower()
+estado = False 
+
+for j in range(len(n)):
+    
+     if mensaje == "Si":
+         estado = True
+     if estado == True:
+             m.append(n[j])
+             print (m)
+             n.remove(j)
+             print (n)
+             
+
+
+
+
+
+
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
  for i in mensaje:
          letra = i.lower()
          if letra == "Si":
