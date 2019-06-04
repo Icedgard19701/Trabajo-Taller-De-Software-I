@@ -55,7 +55,9 @@ while z == 1:
         elif x >= 15:
             print("Pozo ganado:",pozo)
             print("Juego Finalizado")
+            print()
             z = int(input("Si desea reiniciar el juego presione (2), si quiere terminar la aplicación presione(3): "))
+            print()
             if z == 3:
                 break
 
@@ -70,6 +72,7 @@ while z == 2:
 
     for i in range (0,a):
         b = str(input("Inserte nombre jugador: "))
+        print()
     
         while True:
             d = int(input("Cantidad de cartillas compradas: "))
@@ -113,6 +116,8 @@ while z == 2:
             elif x >= 15:
                 print("Pozo ganado:",pozo)
                 print("Juego Finalizado")
+                print()
                 z = int(input("Si desea reiniciar el juego presione (2), si quiere terminar la aplicación presione(3): "))
+                print()
                 if z == 3:
                     break
