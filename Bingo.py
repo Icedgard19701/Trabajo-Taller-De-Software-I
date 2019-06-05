@@ -2,7 +2,6 @@ import random
 import sys
 import os
 
-
 #Definiendo la cantidad de jugadores y cuantas cartillas han comprado
 a = int(input("Cantidad de jugadores: "))
 print()
@@ -37,6 +36,7 @@ for i in range(1,81):
     bolillas_sin_jugar.append(i)
 
 x = 0
+#Definiendo la accion del boton (1) elegir otra bolilla
 while z == 1:
     x = x + 1
     juego = random.choice(bolillas_sin_jugar)
@@ -46,10 +46,13 @@ while z == 1:
     print("Bolilla:",juego)
     print("Bolillas que han salido: ",bolillas_jugadas)
     print()
-    z = int(input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): "))
+    z = int(input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2), si quiere terminar el juego presione (3): "))
+    
+    #Definiendo la accion del boton (3) finalizar juego
     while z == 3:
         if x < 15:
             print("Se deben jugar al menos 15 bolillas para terminar el juego")
+            print()
             z = int(input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): "))
             print()
         elif x >= 15:
@@ -59,9 +62,10 @@ while z == 1:
             z = int(input("Si desea reiniciar el juego presione (2), si quiere terminar la aplicación presione(3): "))
             print()
             if z == 3:
+                print("Programa finalizado")
                 break
 
-#Repeticion del codigo:
+#Accion Boton (2) repeticion del programa
 while z == 2:
     print()
     a = int(input("Cantidad de jugadores: "))
@@ -87,7 +91,6 @@ while z == 2:
     c.append(b)
     e.append(d)
 
-#Definiendo la eleccion de bolillas
     z = int(input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): "))
     bolillas_sin_jugar = []
     bolillas_jugadas = []
@@ -108,7 +111,7 @@ while z == 2:
         print()
         z = int(input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): "))
     
-    #Definiendo Finalizacion del juego
+
         while z == 3:
             if x < 15:
                 print("Se deben jugar al menos 15 bolillas para terminar el juego")
@@ -121,5 +124,3 @@ while z == 2:
                 print()
                 if z == 3:
                     break
-
-
