@@ -61,6 +61,7 @@ while z == 1:
             print()
             z = int(input("Si desea reiniciar el juego presione (2), si quiere terminar la aplicación presione(3): "))
             print()
+            #Verfificacion Finalizacion del programa
             if z == 3:
                 print("Programa finalizado")
                 break
