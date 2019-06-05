@@ -50,7 +50,11 @@ while codigo == 1:
 
 while codigo == 2: 
      print ("Has seleccionado salir")
+     print ("Bolillas que ya salieron:", m)
+     car = car*5
+     print ("El pozo tiene S/.", car*c)
      break
+
 
 
 
