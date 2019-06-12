@@ -3,7 +3,14 @@ import sys
 import os
 
 #Definiendo la cantidad de jugadores y cuantas cartillas han comprado
-a = int(input("Cantidad de jugadores: "))
+a = input("Cantidad de jugadores: ")
+while True:
+    try: #Captura del error para ingreso de números
+        a = int(a)
+        break
+    except:
+        print("Escriba un número. ")
+        a = input("Cantidad de jugadores: ")
 print()
 c = []
 e = []
@@ -13,7 +20,14 @@ for i in range (0,a):
     b = str(input("Inserte nombre jugador: "))
         
     while True:
-        d = int(input("Cantidad de cartillas compradas: "))
+        d = input("Cantidad de cartillas compradas: ")
+        while True:
+            try:
+                d = int(d)
+                break
+            except:
+                print("Escriba un número. ")
+                d = input("Cantidad de cartillas compradas: ")
         print()
         if d > 3:
             print("Solo puede comprar hasta 3 cartillas")
