@@ -234,8 +234,8 @@ while z == 2:
                     print("Debe ingresar un número")
                     print()
                     a = input("Cantidad de jugadores: ")
-        else:
-            break
+    else:
+        break
         
     print()
     c = []
