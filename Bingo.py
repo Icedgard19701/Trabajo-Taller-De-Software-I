@@ -4,6 +4,7 @@ import os
 
 #Definiendo la cantidad de jugadores y cuantas cartillas han comprado
 a = input("Cantidad de jugadores: ")
+
 #Captura del error para ingreso de números
 while True:
     try:
@@ -14,6 +15,24 @@ while True:
         print()
         a = input("Cantidad de jugadores: ")
 
+#Que sea positivo
+while True:
+    a < 0
+    if a < 0:
+        print ("Debe colocar un numero positivo")
+        print()
+        a = input("Cantidad de jugadores: ")
+        while True:
+            try:
+                a = int(a)
+                break
+            except:
+                print("Debe ingresar un número")
+                print()
+                a = input("Cantidad de jugadores: ")
+    else:
+        break
+        
 print()
 c = []
 e = []
@@ -121,6 +140,21 @@ while z == 1:
                     print("Debe ingresar un número")
                     print()
                     z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
+                    while z != 1 and z != 2 and z != 3:
+                        print("Debe de elegir (1), (2), (3)")
+                        print()
+                        z = input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2), si quiere terminar el juego presione (3): ")
+                        #Evaluar que sea numero:
+                        while True:
+                            try:
+                                z = int(z)
+                                break
+                            except:
+                                print("Debe ingresar un número")
+                                print()
+                                z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
+
+
 
             print()
         elif x >= 15:
@@ -157,9 +191,9 @@ while z == 1:
 
 
     while z != 1 and z != 2 and z != 3:
-        print("Debe de elegir (2), (3)")
+        print("Debe de elegir (1), (2), (3)")
         print()
-        z = input("Si desea reiniciar el juego presione (2), si quiere terminar el juego presione (3): ")
+        z = input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2), si quiere terminar el juego presione (3): ")
         #Evaluar que sea numero:
         while True:
             try:
@@ -168,7 +202,7 @@ while z == 1:
             except:
                 print("Debe ingresar un número")
                 print()
-                z = input("Si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
+                z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
 
 
 #Accion Boton (2) repeticion del programa
@@ -184,6 +218,24 @@ while z == 2:
             print("Debe ingresar un número")
             print()
             a = input("Cantidad de jugadores: ")
+
+    #Que sea positivo
+    while True:
+        a < 0
+        if a < 0:
+            print ("Debe colocar un numero positivo")
+            print()
+            a = input("Cantidad de jugadores: ")
+            while True:
+                try:
+                    a = int(a)
+                    break
+                except:
+                    print("Debe ingresar un número")
+                    print()
+                    a = input("Cantidad de jugadores: ")
+        else:
+            break
         
     print()
     c = []
@@ -232,7 +284,19 @@ while z == 2:
             print("Debe ingresar un número")
             print()
             z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
-
+    while z != 1 and z != 2 and z != 3:
+        print("Debe de elegir (1), (2), (3)")
+        print()
+        z = input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2), si quiere terminar el juego presione (3): ")
+        #Evaluar que sea numero:
+        while True:
+            try:
+                z = int(z)
+                break
+            except:
+                print("Debe ingresar un número")
+                print()
+                z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
 
     for i in range(1,81):
         bolillas_sin_jugar.append(i)
@@ -253,7 +317,6 @@ while z == 2:
                 print()
                 z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
 
-
     while z == 1:
         x = x + 1
         juego = random.choice(bolillas_sin_jugar)
@@ -263,8 +326,8 @@ while z == 2:
         print("Bolilla:",juego)
         print("Bolillas que han salido: ",bolillas_jugadas)
         print()
-        z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
-        #Evaluar que sea numero:
+        z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2), si quiere terminar el juego presione (3): ")
+    #Evaluar que sea numero:
         while True:
             try:
                 z = int(z)
@@ -273,8 +336,20 @@ while z == 2:
                 print("Debe ingresar un número")
                 print()
                 z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
+        while z != 1 and z != 2 and z != 3:
+            print("Debe de elegir (1), (2), (3)")
+            print()
+            z = input("Si desea otra bolilla presione (1), si desea reiniciar el juego presione (2), si quiere terminar el juego presione (3): ")
+            #Evaluar que sea numero:
+            while True:
+                try:
+                    z = int(z)
+                    break
+                except:
+                    print("Debe ingresar un número")
+                    print()
+                    z = input("Si desea una bolilla presione (1), si desea reiniciar el juego presione (2). si quiere terminar el juego presione (3): ")
 
-    
 
         while z == 3:
             if x < 15:
