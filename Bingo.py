@@ -4,6 +4,7 @@ import os
 
 #Definiendo la cantidad de jugadores y cuantas cartillas han comprado
 a = input("Cantidad de jugadores: ")
+
 #Captura del error para ingreso de números
 while True:
     try:
@@ -14,6 +15,24 @@ while True:
         print()
         a = input("Cantidad de jugadores: ")
 
+#Que sea positivo
+while True:
+    a < 0
+    if a < 0:
+        print ("Debe colocar un numero positivo")
+        print()
+        a = input("Cantidad de jugadores: ")
+        while True:
+            try:
+                a = int(a)
+                break
+            except:
+                print("Debe ingresar un número")
+                print()
+                a = input("Cantidad de jugadores: ")
+    else:
+        break
+        
 print()
 c = []
 e = []
@@ -199,6 +218,24 @@ while z == 2:
             print("Debe ingresar un número")
             print()
             a = input("Cantidad de jugadores: ")
+
+    #Que sea positivo
+    while True:
+        a < 0
+        if a < 0:
+            print ("Debe colocar un numero positivo")
+            print()
+            a = input("Cantidad de jugadores: ")
+            while True:
+                try:
+                    a = int(a)
+                    break
+                except:
+                    print("Debe ingresar un número")
+                    print()
+                    a = input("Cantidad de jugadores: ")
+        else:
+            break
         
     print()
     c = []
